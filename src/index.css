@@ -6,6 +6,8 @@
   --font-jetbrains: "JetBrains Mono", monospace;
   --font-inter: "Inter", sans-serif;
 
+  --color-primary-black: #0a090c;
+
   --breakpoint-mobile-768: 768px;
   --breakpoint-mobile-640: 640px;
   --breakpoint-mobile-425: 425px;
