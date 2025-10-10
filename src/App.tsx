@@ -1,13 +1,13 @@
 import React from "react";
+import { BrowserRouter } from "react-router";
 
-import { Layout } from "./components/layout/Layout";
-import { Hero } from "./components/hero/Hero";
+import Routes from "@routes/Routes";
 
 export const App: React.FC = () => {
   return (
-    <Layout>
-      <Hero />
-    </Layout>
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
   );
 };
 
