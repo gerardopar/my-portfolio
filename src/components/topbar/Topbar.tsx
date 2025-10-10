@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Nav } from "@components/nav/Nav";
+import Divider from "../shared/Divider";
 
 export const Topbar: React.FC = () => {
   return (
@@ -9,9 +10,7 @@ export const Topbar: React.FC = () => {
         <p className="text-primary-white font-jetbrains font-bold">
           Gerardo Paredes
         </p>
-        <div className="flex flex-1 items-center justify-center">
-          <div className="w-full h-[.5px] bg-primary-gray" />
-        </div>
+        <Divider />
         <Nav />
       </div>
     </header>
