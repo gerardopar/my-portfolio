@@ -1,6 +1,6 @@
 import LumeThumbnail from "@assets/images/lume-thumb.png";
 
-interface Project {
+export interface Project {
   title: string;
   description: string;
   techStack: string[];
@@ -10,7 +10,7 @@ interface Project {
   sourceCodeUrl?: string;
 }
 
-const projects: Project[] = [
+export const projects: Project[] = [
   {
     title: "Lume – Movie Management Platform",
     description:

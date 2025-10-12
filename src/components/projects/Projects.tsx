@@ -1,69 +1,12 @@
-import { motion } from "motion/react";
-
 import projects from "./projects.helpers";
+import ProjectItem from "./ProjectItem";
 
 export const Projects = () => {
   return (
     <section className="relative bg-gray-shade-dark text-white">
       <div className="relative h-[100vh]">
         {projects.map((project, idx) => {
-          const zIndex = projects.length + idx;
-          let bgColor = "";
-
-          if (idx === 0) {
-            bgColor = "bg-gray-shade-light";
-          } else if (idx === 1) {
-            bgColor = "bg-gray-shade-medium";
-          } else if (idx === 2) {
-            bgColor = "bg-gray-shade-dark";
-          }
-
-          return (
-            <div
-              key={idx}
-              className="group sticky top-[80px] h-[33%] transition-transform duration-500 ease-in-out"
-              style={{ zIndex }}
-            >
-              <motion.div
-                className={`p-8 flex justify-between items-center h-full ${bgColor}`}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.5,
-                  delay: idx * 0.1,
-                }}
-                viewport={{ once: true }}
-              >
-                <div className="w-full mx-4">
-                  <div className="mb-4 flex flex-col items-start justify-start text-left">
-                    <h3 className="text-2xl font-inter mb-2 font-semibold leading-8">
-                      {project.title}
-                    </h3>
-                    <p className="text-white font-jetbrains max-w-[600px]">
-                      {project.description}
-                    </p>
-                  </div>
-
-                  <div className="flex flex-wrap gap-3 items-center text-xs text-white/70 mb-2">
-                    {project.techStack.map((tag, tIdx) => (
-                      <span
-                        key={tIdx}
-                        className="border border-white/20 px-3 py-1 rounded-full"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-[320px] shadow-lg grayscale group-hover:grayscale-0 transition-[filter,transform] duration-500 ease-in-out"
-                />
-              </motion.div>
-            </div>
-          );
+          return <ProjectItem key={idx} project={project} idx={idx} />;
         })}
       </div>
     </section>
