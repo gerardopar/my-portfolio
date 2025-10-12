@@ -13,6 +13,13 @@ export const CustomCursor = () => {
     return () => window.removeEventListener("mousemove", move);
   }, []);
 
+  useEffect(() => {
+    document.body.style.cursor = isHoveringProject ? "none" : "auto";
+    return () => {
+      document.body.style.cursor = "auto";
+    };
+  }, [isHoveringProject]);
+
   return (
     <motion.div
       className="fixed top-0 left-0 z-[9999] pointer-events-none mix-blend-difference"
