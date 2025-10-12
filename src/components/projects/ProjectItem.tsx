@@ -2,10 +2,14 @@ import { motion } from "motion/react";
 
 import { type Project, projects } from "./projects.helpers";
 
+import { cursorStore } from "../../stores/cursor";
+
 export const ProjectItem: React.FC<{ project: Project; idx: number }> = ({
   project,
   idx,
 }) => {
+  const setIsHoveringProject = cursorStore.actions.setIsHoveringProject;
+
   const zIndex = projects.length + idx;
   let bgColor = "";
 
@@ -32,6 +36,8 @@ export const ProjectItem: React.FC<{ project: Project; idx: number }> = ({
           delay: idx * 0.1,
         }}
         viewport={{ once: true }}
+        onMouseEnter={() => setIsHoveringProject(true)}
+        onMouseLeave={() => setIsHoveringProject(false)}
       >
         <div className="w-full mx-4">
           <div className="mb-4 flex flex-col items-start justify-start text-left">

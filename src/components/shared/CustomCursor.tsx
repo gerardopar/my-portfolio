@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 
-import { cursorStore } from "@stores/cursor";
+import { cursorStore } from "../../stores/cursor";
 
 export const CustomCursor = () => {
   const [pos, setPos] = useState({ x: 0, y: 0 });
