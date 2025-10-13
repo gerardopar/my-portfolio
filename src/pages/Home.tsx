@@ -4,6 +4,7 @@ import { Hero } from "@components/hero/Hero";
 import { Skills } from "@components/skills/Skills";
 import { Topbar } from "@components/topbar/Topbar";
 import { Layout } from "@components/layout/Layout";
+import { Contact } from "@components/contact/Contact";
 import { Projects } from "@components/projects/Projects";
 
 export const Home: React.FC = () => {
@@ -13,7 +14,7 @@ export const Home: React.FC = () => {
       <Hero />
       <Projects />
       <Skills />
-      <div className="h-[100vh]" />
+      <Contact />
     </Layout>
   );
 };

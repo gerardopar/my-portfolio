@@ -31,7 +31,7 @@ export const ProjectItem: React.FC<{ project: Project; idx: number }> = ({
       onClick={() => window.open(project.liveDemoUrl, "_blank")}
     >
       <motion.div
-        className={`p-8 flex justify-between items-center h-full ${bgColor}`}
+        className={`p-8 px-20 flex justify-between items-center h-full ${bgColor}`}
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
