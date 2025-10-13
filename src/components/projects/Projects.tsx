@@ -3,7 +3,7 @@ import ProjectItem from "./ProjectItem";
 
 export const Projects = () => {
   return (
-    <section className="relative bg-gray-shade-dark text-white">
+    <section className="relative bg-gray-shade-dark text-primary-white">
       <div className="relative h-[100vh]">
         {projects.map((project, idx) => {
           return <ProjectItem key={idx} project={project} idx={idx} />;
