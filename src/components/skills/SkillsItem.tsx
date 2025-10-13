@@ -46,7 +46,7 @@ export const SkillsItem: React.FC<{ skill: Skill; idx: number }> = ({
       </div>
 
       <div className="flex-1 flex flex-col justify-center">
-        <h3 className="text-2xl font-semibold mb-4 font-inter">
+        <h3 className="text-2xl text-primary-white font-semibold mb-4 font-inter">
           {skill.title}
         </h3>
         <p className="text-gray-400 text-sm leading-relaxed font-jetbrains">
