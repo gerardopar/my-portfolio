@@ -3,6 +3,7 @@ import React from "react";
 import { NodeJsIcon } from "../svgs/NodeJs";
 import { ReactIcon } from "../svgs/ReactIcon";
 import { MongoDBIcon } from "../svgs/MongoDB";
+import { CodepenIcon } from "../svgs/Codepen";
 import { TypeScriptIcon } from "../svgs/TypeScript";
 
 import { type Skill } from "./skills.helpers";
@@ -25,6 +26,9 @@ export const SkillsItem: React.FC<{ skill: Skill; idx: number }> = ({
       break;
     case "db":
       icon = <MongoDBIcon className="text-gray-shade-light/5" />;
+      break;
+    case "tooling":
+      icon = <CodepenIcon className="text-gray-shade-light/5" />;
       break;
     default:
       icon = null;
@@ -51,12 +55,12 @@ export const SkillsItem: React.FC<{ skill: Skill; idx: number }> = ({
       </div>
 
       <div className="flex gap-2 flex-wrap">
-        {skill.tools.map((tool) => (
+        {skill.items.map((item) => (
           <span
-            key={tool}
+            key={item}
             className="text-xs px-4 py-2 border border-gray-shade-medium rounded-full text-gray-300 font-jetbrains"
           >
-            {tool}
+            {item}
           </span>
         ))}
       </div>
