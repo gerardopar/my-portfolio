@@ -4,7 +4,7 @@ import { GithubIcon } from "../svgs/GithubIcon";
 
 export const Contact: React.FC = () => {
   return (
-    <section className="relative h-[90vh] bg-primary-black px-12">
+    <section className="relative h-[90vh] bg-primary-black px-12" id="contact">
       <div className="flex flex-col h-full items-start justify-between px-12 py-[50px]">
         <p className="text-[120px] text-primary-gray font-semibold leading-8">
           Let's{" "}

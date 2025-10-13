@@ -37,6 +37,7 @@ export const Skills = () => {
       ref={containerRef}
       className="relative bg-primary-black"
       style={{ height: `${totalCards * 100}vh` }}
+      id="skills"
     >
       <div className="sticky top-0 h-screen overflow-hidden">
         {/* Header */}

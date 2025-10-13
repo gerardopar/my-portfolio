@@ -7,7 +7,7 @@ import HeroBackground from "@assets/images/hero-background.png";
 
 export const Hero: React.FC = () => {
   return (
-    <div className="h-[100vh] w-full px-24 pt-24">
+    <div className="h-[100vh] w-full px-24 pt-24" id="about">
       <Headliner />
       <div
         className="w-full h-[240px] mt-[80px]"
