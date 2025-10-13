@@ -10,7 +10,7 @@ export const skills: Skill[] = [
     title: "React Ecosystem",
     description:
       "Building fast, interactive UIs across web and mobile using reusable components, hooks, and Capacitor for native experiences.",
-    items: ["React", "React Native", "Expo", "Capacitor"],
+    items: ["React", "React Native", "Expo", "Capacitor", "Ionic"],
     type: "react",
   },
   {
@@ -37,7 +37,7 @@ export const skills: Skill[] = [
   {
     title: "Developer Toolkit",
     description:
-      "Optimizing performance, developer experience, and maintainability with essential tools and patterns.",
+      "Optimizing performance, developer experience, and creative workflows using essential tools, modern patterns, and AI-assisted development.",
     items: [
       "Firebase",
       "Vite",
@@ -53,6 +53,8 @@ export const skills: Skill[] = [
       "Postman",
       "Slack",
       "Lottie",
+      "Prompt Engineering",
+      "Windsurf",
     ],
     type: "tooling",
   },

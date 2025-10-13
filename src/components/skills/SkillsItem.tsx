@@ -37,7 +37,7 @@ export const SkillsItem: React.FC<{ skill: Skill; idx: number }> = ({
   return (
     <div
       key={idx}
-      className="w-[400px] h-[70vh] bg-gray-shade-dark rounded-2xl flex flex-col justify-between p-8 flex-shrink-0 relative overflow-hidden"
+      className="w-[400px] h-[70vh] bg-gray-shade-dark flex flex-col justify-between p-8 flex-shrink-0 relative overflow-hidden"
     >
       <div className="w-12 h-12 absolute top-5 right-5">{icon}</div>
 
