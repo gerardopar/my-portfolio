@@ -1,8 +1,10 @@
 import { motion } from "motion/react";
 
-import { type Project, projects } from "./projects.helpers";
+import GithubButton from "../shared/Github";
 
 import { cursorStore } from "../../stores/cursor";
+
+import { type Project, projects } from "./projects.helpers";
 
 export const ProjectItem: React.FC<{ project: Project; idx: number }> = ({
   project,
@@ -41,10 +43,13 @@ export const ProjectItem: React.FC<{ project: Project; idx: number }> = ({
       >
         <div className="w-full mx-4">
           <div className="mb-4 flex flex-col items-start justify-start text-left">
-            <h3 className="text-2xl font-inter mb-2 font-semibold leading-8">
-              {project.title}
-            </h3>
-            <p className="text-white font-jetbrains max-w-[600px]">
+            <div className="flex items-center gap-2">
+              <h3 className="text-2xl font-inter font-semibold leading-8">
+                {project.title}
+              </h3>
+              <GithubButton link={project.sourceCodeUrl} />
+            </div>
+            <p className="text-white font-jetbrains max-w-[600px] mt-2">
               {project.description}
             </p>
           </div>

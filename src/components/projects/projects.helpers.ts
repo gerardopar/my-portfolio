@@ -5,9 +5,8 @@ export interface Project {
   description: string;
   techStack: string[];
   image: string;
-  caseStudyUrl?: string;
   liveDemoUrl?: string;
-  sourceCodeUrl?: string;
+  sourceCodeUrl: string;
 }
 
 export const projects: Project[] = [
