@@ -22,7 +22,10 @@ export const GithubButton: React.FC<{ link: string }> = ({ link }) => {
       className="cursor-pointer"
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      onClick={() => window.open(link, "_blank")}
+      onClick={(e) => {
+        e.stopPropagation();
+        window.open(link, "_blank");
+      }}
     >
       <GithubIcon />
     </button>

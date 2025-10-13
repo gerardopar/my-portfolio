@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 
-import GithubButton from "../shared/Github";
+import GithubButton from "../shared/GithubButton";
 
 import { cursorStore } from "../../stores/cursor";
 
@@ -28,6 +28,7 @@ export const ProjectItem: React.FC<{ project: Project; idx: number }> = ({
       key={idx}
       className="group sticky top-[80px] h-[33%] transition-transform duration-500 ease-in-out"
       style={{ zIndex }}
+      onClick={() => window.open(project.liveDemoUrl, "_blank")}
     >
       <motion.div
         className={`p-8 flex justify-between items-center h-full ${bgColor}`}
