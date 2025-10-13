@@ -1,15 +1,47 @@
 import React from "react";
 
+import { GithubIcon } from "../svgs/GithubIcon";
+
 export const Contact: React.FC = () => {
   return (
-    <section className="relative h-[100vh] bg-primary-black px-12">
-      <div className="px-12 pt-[100px]">
+    <section className="relative h-[90vh] bg-primary-black px-12">
+      <div className="flex flex-col h-full items-start justify-between px-12 py-[50px]">
         <p className="text-[120px] text-primary-gray font-semibold leading-8">
           Let's{" "}
           <span className="text-[120px] text-primary-white font-semibold">
             Connect
           </span>
         </p>
+
+        <div className="flex flex-col items-start w-full gap-4">
+          <h3 className="text-2xl text-left text-primary-white font-inter font-semibold leading-8">
+            Drop me a line — I’m always happy to connect.
+          </h3>
+          <div className="flex items-center w-full">
+            <button
+              onClick={() =>
+                window.open(
+                  "https://www.linkedin.com/in/gerardo-paredes-562474168",
+                  "_blank"
+                )
+              }
+              className="flex-1 bg-gray-shade-light py-6 px-4 font-inter text-primary-white text-xl cursor-pointer"
+            >
+              Connect on LinkedIn
+            </button>
+            <button className="flex-1 bg-gray-shade-medium py-6 px-4 font-inter text-primary-white text-xl cursor-pointer">
+              Send Email
+            </button>
+            <button
+              onClick={() =>
+                window.open("https://github.com/gerardopar", "_blank")
+              }
+              className="flex-1 items-center justify-center text-center bg-gray-shade-dark gap-2 py-6 px-4 font-inter text-primary-white text-xl cursor-pointer"
+            >
+              <GithubIcon className="w-[24px] h-[24px] inline-block" /> Github
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   );
