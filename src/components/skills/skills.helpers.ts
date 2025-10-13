@@ -1,4 +1,10 @@
-export const skills = [
+export type Skill = {
+  title: string;
+  description: string;
+  tools: string[];
+};
+
+export const skills: Skill[] = [
   {
     title: "React Ecosystem",
     description:
