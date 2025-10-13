@@ -29,7 +29,12 @@ export const Contact: React.FC = () => {
             >
               Connect on LinkedIn
             </button>
-            <button className="flex-1 bg-gray-shade-medium py-6 px-4 font-inter text-primary-white text-xl cursor-pointer">
+            <button
+              onClick={() => {
+                window.location.href = "mailto:gerardparedes23@gmail.com";
+              }}
+              className="flex-1 bg-gray-shade-medium py-6 px-4 font-inter text-primary-white text-xl cursor-pointer"
+            >
               Send Email
             </button>
             <button
