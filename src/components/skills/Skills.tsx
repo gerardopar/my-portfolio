@@ -41,7 +41,7 @@ export const Skills = () => {
     >
       <div className="sticky top-0 h-screen overflow-hidden">
         {/* Header */}
-        <div className="absolute top-0 left-0 right-0 z-10 px-24 py-16">
+        <div className="absolute top-0 left-0 right-0 z-10 px-24 max-mobile-768:px-12 py-16">
           <h1 className="text-5xl font-bold font-inter text-primary-white">
             Skills
           </h1>

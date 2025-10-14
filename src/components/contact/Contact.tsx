@@ -4,11 +4,14 @@ import { GithubIcon } from "../svgs/GithubIcon";
 
 export const Contact: React.FC = () => {
   return (
-    <section className="relative h-[90vh] bg-primary-black px-12" id="contact">
-      <div className="flex flex-col h-full items-start justify-between px-12 py-[50px]">
-        <p className="text-[120px] text-primary-gray font-semibold leading-8">
+    <section
+      className="relative h-[90vh] bg-primary-black px-24 max-mobile-768:px-12"
+      id="contact"
+    >
+      <div className="flex flex-col h-full items-start justify-between py-[50px]">
+        <p className="text-[120px] text-primary-gray font-semibold leading-[80px] max-mobile-768:text-[90px]">
           Let's{" "}
-          <span className="text-[120px] text-primary-white font-semibold">
+          <span className="text-[120px] text-primary-white font-semibold max-mobile-768:text-[90px]">
             Connect
           </span>
         </p>
@@ -25,15 +28,15 @@ export const Contact: React.FC = () => {
                   "_blank"
                 )
               }
-              className="flex-1 bg-gray-shade-light py-6 px-4 font-inter text-primary-white text-xl cursor-pointer"
+              className="flex-1 bg-gray-shade-light py-6 px-4 font-inter text-primary-white text-xl cursor-pointer max-mobile-768:text-lg"
             >
-              Connect on LinkedIn
+              <span className="max-mobile-768:hidden">Connect on</span> LinkedIn
             </button>
             <button
               onClick={() => {
                 window.location.href = "mailto:gerardparedes23@gmail.com";
               }}
-              className="flex-1 bg-gray-shade-medium py-6 px-4 font-inter text-primary-white text-xl cursor-pointer"
+              className="flex-1 bg-gray-shade-medium py-6 px-4 font-inter text-primary-white text-xl cursor-pointer max-mobile-768:text-lg"
             >
               Send Email
             </button>
@@ -41,7 +44,7 @@ export const Contact: React.FC = () => {
               onClick={() =>
                 window.open("https://github.com/gerardopar", "_blank")
               }
-              className="flex-1 items-center justify-center text-center bg-gray-shade-dark gap-2 py-6 px-4 font-inter text-primary-white text-xl cursor-pointer"
+              className="flex-1 items-center justify-center text-center bg-gray-shade-dark gap-2 py-6 px-4 font-inter text-primary-white text-xl cursor-pointer max-mobile-768:text-lg"
             >
               <GithubIcon className="w-[24px] h-[24px] inline-block" /> Github
             </button>
