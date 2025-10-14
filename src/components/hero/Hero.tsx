@@ -7,10 +7,13 @@ import HeroBackground from "@assets/images/hero-background.png";
 
 export const Hero: React.FC = () => {
   return (
-    <div className="h-[100vh] w-full px-24 pt-24" id="about">
+    <div
+      className="h-[100vh] w-full px-24 pt-24 max-mobile-768:px-12"
+      id="about"
+    >
       <Headliner />
       <div
-        className="w-full h-[240px] mt-[80px]"
+        className="w-full h-[240px] mt-[80px] max-mobile-768:mt-[60px]"
         style={{
           backgroundImage: `url(${HeroBackground})`,
           backgroundSize: "cover",
@@ -18,21 +21,21 @@ export const Hero: React.FC = () => {
           backgroundPosition: "bottom",
         }}
       />
-      <div className="w-full h-[240px] mt-[100px]">
-        <p className="text-[120px] text-primary-gray font-semibold leading-8">
+      <div className="w-full h-[240px] mt-[100px] max-mobile-768:mt-[60px]">
+        <p className="text-[120px] text-primary-gray font-semibold leading-8 max-mobile-768:text-[90px]">
           Full Stack
         </p>
-        <p className="text-[120px] text-primary-white font-semibold pl-16">
+        <p className="text-[120px] text-primary-white font-semibold pl-16 max-mobile-768:text-[90px]">
           Developer
         </p>
       </div>
 
-      <div className="w-full flex items-center justify-center gap-8">
-        <p className="text-primary-white font-jetbrains font-bold">
+      <div className="w-full flex items-center justify-center gap-8 max-mobile-768:gap-4">
+        <p className="text-primary-white font-jetbrains font-bold max-mobile-768:text-sm">
           🌴 Ventura, CA
         </p>
-        <Divider />
-        <p className="text-primary-white font-jetbrains font-bold">
+        <Divider className="max-mobile-768:hidden" />
+        <p className="text-primary-white font-jetbrains font-bold max-mobile-768:hidden">
           Pacific Time (UTC-7)
         </p>
         <Divider />

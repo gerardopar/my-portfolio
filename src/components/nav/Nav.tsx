@@ -2,7 +2,7 @@ import React from "react";
 
 export const Nav: React.FC = () => {
   return (
-    <nav className="flex gap-12">
+    <nav className="flex gap-12 max-mobile-768:gap-6">
       <a
         className="glitch text-primary-white font-inter font-[200]"
         href="#about"
