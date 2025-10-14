@@ -31,7 +31,7 @@ export const ProjectItem: React.FC<{ project: Project; idx: number }> = ({
       onClick={() => window.open(project.liveDemoUrl, "_blank")}
     >
       <motion.div
-        className={`p-8 px-20 flex justify-between items-center h-full ${bgColor}`}
+        className={`p-8 px-20 max-mobile-768:px-12 flex max-mobile-768:flex-col justify-between items-center h-full ${bgColor}`}
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
@@ -45,12 +45,12 @@ export const ProjectItem: React.FC<{ project: Project; idx: number }> = ({
         <div className="w-full mx-4">
           <div className="mb-4 flex flex-col items-start justify-start text-left">
             <div className="flex items-center gap-2">
-              <h3 className="text-2xl font-inter font-semibold leading-8">
+              <h3 className="text-2xl font-inter font-semibold leading-8 max-mobile-768:text-xl">
                 {project.title}
               </h3>
               <GithubButton link={project.sourceCodeUrl} />
             </div>
-            <p className="text-white font-jetbrains max-w-[600px] mt-2">
+            <p className="text-white font-jetbrains max-w-[600px] mt-2 max-mobile-768:text-sm">
               {project.description}
             </p>
           </div>
@@ -70,7 +70,7 @@ export const ProjectItem: React.FC<{ project: Project; idx: number }> = ({
         <img
           src={project.image}
           alt={project.title}
-          className="w-[320px] shadow-lg grayscale group-hover:grayscale-0 transition-[filter,transform] duration-500 ease-in-out"
+          className="w-[320px] shadow-lg grayscale group-hover:grayscale-0 transition-[filter,transform] duration-500 ease-in-out max-mobile-768:hidden"
         />
       </motion.div>
     </div>
