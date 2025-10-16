@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useLayoutEffect } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 
 import { SkillsItem } from "./SkillsItem";
@@ -8,22 +8,36 @@ import { skills } from "./skills.helpers";
 
 export const Skills = () => {
   const containerRef = useRef(null);
+  const cardsRef = useRef(null);
+  const [maxScroll, setMaxScroll] = useState(0);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"],
   });
 
+  // Calculate the actual distance needed to scroll all cards
+  useLayoutEffect(() => {
+    const updateMaxScroll = () => {
+      if (cardsRef.current) {
+        const cardsWidth = cardsRef?.current?.scrollWidth;
+        const viewportWidth = window.innerWidth;
+        // Calculate how far we need to translate to show all cards
+        const scrollDistance = cardsWidth - viewportWidth + 0;
+        setMaxScroll(scrollDistance);
+      }
+    };
+
+    updateMaxScroll();
+    window.addEventListener("resize", updateMaxScroll);
+    return () => window.removeEventListener("resize", updateMaxScroll);
+  }, []);
+
   const totalCards = skills.length;
 
-  // Translate the cards horizontally based on scroll
-  const x = useTransform(
-    scrollYProgress,
-    [0, 1],
-    ["0%", `-${(totalCards - 1) * 7}%`]
-  );
+  // Use the calculated maxScroll instead of a fixed percentage
+  const x = useTransform(scrollYProgress, [0, 1], [0, -maxScroll]);
 
-  // Animate Umbreon in when scroll hits ~90%
   const umbreonOpacity = useTransform(scrollYProgress, [0.85, 1], [0, 1]);
   const umbreonX = useTransform(scrollYProgress, [0.85, 1], [30, 0]);
   const bounce = useSpring(useTransform(scrollYProgress, [0.9, 1], [0, -10]), {
@@ -50,6 +64,7 @@ export const Skills = () => {
         {/* Cards & Umbreon */}
         <div className="flex items-center h-full px-12">
           <motion.div
+            ref={cardsRef}
             style={{ x }}
             className="flex gap-8 items-center relative"
           >
@@ -61,7 +76,7 @@ export const Skills = () => {
             <motion.img
               src={UmbreonGif}
               alt="Umbreon"
-              className="w-[100px] rotate-[-10deg] absolute bottom-[50%] right-[-7%] z-10"
+              className="w-[100px] rotate-[-10deg] absolute bottom-[50%] right-[-7.5%] z-10"
               style={{
                 opacity: umbreonOpacity,
                 x: umbreonX,
