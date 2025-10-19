@@ -20,7 +20,7 @@ export const Contact: React.FC = () => {
           <h3 className="text-2xl text-left text-primary-white font-inter font-semibold leading-8">
             Drop me a line — I’m always happy to connect.
           </h3>
-          <div className="flex items-center w-full">
+          <div className="flex items-center w-full max-mobile-640:flex-col">
             <button
               onClick={() =>
                 window.open(
@@ -28,7 +28,7 @@ export const Contact: React.FC = () => {
                   "_blank"
                 )
               }
-              className="flex-1 bg-gray-shade-light py-6 px-4 font-inter text-primary-white text-xl cursor-pointer max-mobile-768:text-lg"
+              className="flex-1 bg-gray-shade-light py-6 px-4 font-inter text-primary-white text-xl cursor-pointer max-mobile-768:text-lg max-mobile-640:w-full"
             >
               <span className="max-mobile-768:hidden">Connect on</span> LinkedIn
             </button>
@@ -36,7 +36,7 @@ export const Contact: React.FC = () => {
               onClick={() => {
                 window.location.href = "mailto:gerardparedes23@gmail.com";
               }}
-              className="flex-1 bg-gray-shade-medium py-6 px-4 font-inter text-primary-white text-xl cursor-pointer max-mobile-768:text-lg"
+              className="flex-1 bg-gray-shade-medium py-6 px-4 font-inter text-primary-white text-xl cursor-pointer max-mobile-768:text-lg max-mobile-640:w-full"
             >
               Send Email
             </button>
@@ -44,7 +44,7 @@ export const Contact: React.FC = () => {
               onClick={() =>
                 window.open("https://github.com/gerardopar", "_blank")
               }
-              className="flex-1 items-center justify-center text-center bg-gray-shade-dark gap-2 py-6 px-4 font-inter text-primary-white text-xl cursor-pointer max-mobile-768:text-lg"
+              className="flex-1 items-center justify-center text-center bg-gray-shade-dark gap-2 py-6 px-4 font-inter text-primary-white text-xl cursor-pointer max-mobile-768:text-lg max-mobile-640:w-full"
             >
               <GithubIcon className="w-[24px] h-[24px] inline-block" /> Github
             </button>
