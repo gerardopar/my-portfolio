@@ -26,12 +26,12 @@ export const ProjectItem: React.FC<{ project: Project; idx: number }> = ({
   return (
     <div
       key={idx}
-      className="group sticky top-[80px] transition-transform duration-500 ease-in-out"
+      className="group sticky top-[80px] h-[33%] transition-transform duration-500 ease-in-out"
       style={{ zIndex }}
       onClick={() => window.open(project.liveDemoUrl, "_blank")}
     >
       <motion.div
-        className={`py-12 px-20 max-mobile-768:px-12 flex max-mobile-768:flex-col justify-between items-center h-full ${bgColor}`}
+        className={`p-8 px-20 max-mobile-768:px-12 flex max-mobile-768:flex-col justify-between items-center h-full ${bgColor}`}
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
