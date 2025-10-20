@@ -23,8 +23,8 @@ and the vibe I bring to the teams I work with.
 
 ## 🚀 Setup
 
+Requires: Bun, Node 18+
+
 ```bash
 bun i
 bun dev
-
-Requires: Bun, Node 18+
