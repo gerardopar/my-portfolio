@@ -1,7 +1,8 @@
 import React from "react";
 
-import { Nav } from "@components/nav/Nav";
 import Divider from "../shared/Divider";
+import { Nav } from "@components/nav/Nav";
+import { HamburgerMenuButton } from "../shared/HamburgerMenuButton";
 
 export const Topbar: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ export const Topbar: React.FC = () => {
         </p>
         <Divider />
         <Nav />
+        <HamburgerMenuButton />
       </div>
     </header>
   );
