@@ -3,7 +3,7 @@ import React from "react";
 import Divider from "@components/shared/Divider";
 import Headliner from "@components/headliner/Headliner";
 import RotatingStatus from "@components/shared/RotatingText";
-import HeroBackground from "@assets/images/hero-background.png";
+import HeroBackground from "@assets/images/hero-background-2.png";
 
 export const Hero: React.FC = () => {
   return (
