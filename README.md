@@ -1,4 +1,4 @@
-# [gerardoparedes.com](gerardoparedes.com)
+# [gerardoparedes.com](https://gerardoparedes.com)
 
 This is my personal developer portfolio — a minimal,  
 synthwave‑inspired space to showcase who I am, what I build,  
