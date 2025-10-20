@@ -7,8 +7,8 @@ import UmbreonGif from "@assets/images/umbreon-sprite.gif";
 import { skills } from "./skills.helpers";
 
 export const Skills = () => {
-  const containerRef = useRef(null);
-  const cardsRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const cardsRef = useRef<HTMLDivElement | null>(null);
   const [maxScroll, setMaxScroll] = useState(0);
 
   const { scrollYProgress } = useScroll({
