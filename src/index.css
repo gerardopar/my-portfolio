@@ -14,6 +14,7 @@
   --color-gray-shade-medium: #495057;
   --color-gray-shade-light: #6c757d;
 
+  --breakpoint-mobile-991: 991px;
   --breakpoint-mobile-768: 768px;
   --breakpoint-mobile-640: 640px;
   --breakpoint-mobile-425: 425px;

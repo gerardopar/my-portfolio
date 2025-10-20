@@ -26,7 +26,7 @@ export const ProjectItem: React.FC<{ project: Project; idx: number }> = ({
   return (
     <div
       key={idx}
-      className="group sticky top-[80px] h-[33%] transition-transform duration-500 ease-in-out"
+      className="group sticky top-[80px] h-[33%] max-mobile-991:h-auto transition-transform duration-500 ease-in-out"
       style={{ zIndex }}
       onClick={() => window.open(project.liveDemoUrl, "_blank")}
     >
@@ -70,7 +70,7 @@ export const ProjectItem: React.FC<{ project: Project; idx: number }> = ({
         <img
           src={project.image}
           alt={project.title}
-          className="w-[320px] shadow-lg grayscale group-hover:grayscale-0 transition-[filter,transform] duration-500 ease-in-out max-mobile-768:hidden"
+          className="w-[320px] shadow-lg grayscale group-hover:grayscale-0 transition-[filter,transform] duration-500 ease-in-out max-mobile-991:hidden"
         />
       </motion.div>
     </div>
