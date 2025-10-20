@@ -39,6 +39,9 @@ export const skills: Skill[] = [
     description:
       "Optimizing performance, developer experience, and creative workflows using essential tools, modern patterns, and AI-assisted development.",
     items: [
+      "HTML",
+      "CSS",
+      "JavaScript",
       "Firebase",
       "Vite",
       "Zustand",

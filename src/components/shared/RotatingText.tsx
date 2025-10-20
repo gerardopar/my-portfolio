@@ -40,7 +40,7 @@ export const RotatingStatus: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
-          className="text-primary-white font-jetbrains font-bold absolute"
+          className="text-primary-white font-jetbrains font-bold absolute max-mobile-768:text-base"
         >
           {current}
         </motion.p>

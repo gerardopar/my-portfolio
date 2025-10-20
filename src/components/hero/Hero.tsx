@@ -1,16 +1,18 @@
 import React from "react";
 
-import Divider from "@components/shared/Divider";
+import HeroBackground from "@assets/images/hero-background-2.png";
 import Headliner from "@components/headliner/Headliner";
-import RotatingStatus from "@components/shared/RotatingText";
-import HeroBackground from "@assets/images/hero-background.png";
+import Location from "@components/shared/Location";
 
 export const Hero: React.FC = () => {
   return (
-    <div className="h-[100vh] w-full px-24 pt-24">
+    <div
+      className="h-[100vh] w-full px-24 pt-24 max-mobile-768:px-12 max-mobile-640:px-4"
+      id="about"
+    >
       <Headliner />
       <div
-        className="w-full h-[240px] mt-[80px]"
+        className="w-full h-[240px] mt-[80px] max-mobile-768:mt-[60px]"
         style={{
           backgroundImage: `url(${HeroBackground})`,
           backgroundSize: "cover",
@@ -18,26 +20,16 @@ export const Hero: React.FC = () => {
           backgroundPosition: "bottom",
         }}
       />
-      <div className="w-full h-[240px] mt-[100px]">
-        <p className="text-[120px] text-primary-gray font-semibold leading-8">
+      <div className="w-full h-[240px] mt-[100px] max-mobile-768:mt-[60px]">
+        <p className="text-[120px] text-primary-gray font-semibold leading-8 max-mobile-768:text-[90px] max-mobile-640:text-[60px]">
           Full Stack
         </p>
-        <p className="text-[120px] text-primary-white font-semibold pl-16">
+        <p className="text-[120px] text-primary-white font-semibold pl-16 max-mobile-375:pl-0 max-mobile-768:text-[90px] max-mobile-640:text-[60px]">
           Developer
         </p>
       </div>
 
-      <div className="w-full flex items-center justify-center gap-8">
-        <p className="text-primary-white font-jetbrains font-bold">
-          🌴 Ventura, CA
-        </p>
-        <Divider />
-        <p className="text-primary-white font-jetbrains font-bold">
-          Pacific Time (UTC-7)
-        </p>
-        <Divider />
-        <RotatingStatus />
-      </div>
+      <Location />
     </div>
   );
 };
