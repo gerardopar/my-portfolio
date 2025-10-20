@@ -5,13 +5,13 @@ import { GithubIcon } from "../svgs/GithubIcon";
 export const Contact: React.FC = () => {
   return (
     <section
-      className="relative h-[90vh] bg-primary-black px-24 max-mobile-768:px-12"
+      className="relative h-[90vh] bg-primary-black px-24 max-mobile-768:px-12 max-mobile-640:px-4"
       id="contact"
     >
       <div className="flex flex-col h-full items-start justify-between py-[50px]">
-        <p className="text-[120px] text-primary-gray font-semibold leading-[80px] max-mobile-768:text-[90px]">
+        <p className="text-[120px] text-primary-gray font-semibold leading-[100px] max-mobile-640:leading-[60px] max-mobile-768:text-[90px] max-mobile-640:text-[60px]">
           Let's{" "}
-          <span className="text-[120px] text-primary-white font-semibold max-mobile-768:text-[90px]">
+          <span className="text-[120px] text-primary-white font-semibold max-mobile-768:text-[90px] max-mobile-640:text-[60px]">
             Connect
           </span>
         </p>
@@ -30,7 +30,7 @@ export const Contact: React.FC = () => {
               }
               className="flex-1 bg-gray-shade-light py-6 px-4 font-inter text-primary-white text-xl cursor-pointer max-mobile-768:text-lg max-mobile-640:w-full"
             >
-              <span className="max-mobile-768:hidden">Connect on</span> LinkedIn
+              LinkedIn
             </button>
             <button
               onClick={() => {

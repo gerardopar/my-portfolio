@@ -1,9 +1,8 @@
 import React from "react";
 
-import Divider from "@components/shared/Divider";
-import Headliner from "@components/headliner/Headliner";
-import RotatingStatus from "@components/shared/RotatingText";
 import HeroBackground from "@assets/images/hero-background-2.png";
+import Headliner from "@components/headliner/Headliner";
+import Location from "@components/shared/Location";
 
 export const Hero: React.FC = () => {
   return (
@@ -25,22 +24,12 @@ export const Hero: React.FC = () => {
         <p className="text-[120px] text-primary-gray font-semibold leading-8 max-mobile-768:text-[90px] max-mobile-640:text-[60px]">
           Full Stack
         </p>
-        <p className="text-[120px] text-primary-white font-semibold pl-16 max-mobile-768:text-[90px] max-mobile-640:text-[60px]">
+        <p className="text-[120px] text-primary-white font-semibold pl-16 max-mobile-375:pl-0 max-mobile-768:text-[90px] max-mobile-640:text-[60px]">
           Developer
         </p>
       </div>
 
-      <div className="w-full flex items-center justify-center gap-8 max-mobile-768:gap-4">
-        <p className="text-primary-white font-jetbrains font-bold max-mobile-768:text-sm">
-          🌴 Ventura, CA
-        </p>
-        <Divider className="max-mobile-768:hidden" />
-        <p className="text-primary-white font-jetbrains font-bold max-mobile-768:hidden">
-          Pacific Time (UTC-7)
-        </p>
-        <Divider />
-        <RotatingStatus />
-      </div>
+      <Location />
     </div>
   );
 };

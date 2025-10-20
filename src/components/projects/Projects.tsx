@@ -7,7 +7,7 @@ export const Projects = () => {
       className="relative bg-primary-black text-primary-white py-8"
       id="projects"
     >
-      <div className="relative h-[100vh]">
+      <div className="relative">
         {projects.map((project, idx) => {
           return <ProjectItem key={idx} project={project} idx={idx} />;
         })}
