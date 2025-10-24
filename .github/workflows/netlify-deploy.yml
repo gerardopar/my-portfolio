@@ -26,7 +26,8 @@ jobs:
         run: bun run build
 
       - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v2.0.1
+        uses: nwtgck/actions-netlify@v3
+
         with:
           publish-dir: ./dist
           production-deploy: true
