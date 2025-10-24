@@ -1,0 +1,37 @@
+name: Netlify Deploy
+
+on:
+  workflow_dispatch: # manual trigger
+  push:
+    branches:
+      - main # auto-deploy on merge to main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Build project
+        run: bun run build
+
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v2.0.1
+        with:
+          publish-dir: ./dist
+          production-deploy: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "🚀 Bun deploy triggered by ${{ github.event_name }}"
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
